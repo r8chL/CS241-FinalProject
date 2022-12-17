@@ -1,0 +1,102 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+} 
+
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 4rem);
+    grid-template-rows: 7rem 2rem 7rem;
+    gap: .5rem;
+    cursor: pointer;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+
+.deck {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;  
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 3rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+.computer1-deck {
+     background-color: plum;
+}
+
+.computer2-deck {
+    background-color: blue;
+}
+
+.computer3-deck {
+    background-color: red;
+}
+
+.restofDeck-deck {
+    background-color: black;
+}
+
+.player-pair-deck {
+    background-color: yellow;  
+}
+
+.computer1-pair-deck {
+    background-color: purple;
+}
+
+
+.text {
+    color: orange;
+    grid-column: span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.card.red {
+    color: red;
+}
+
+.card.black {
+    color: black;
+}
+
+.card::before,
+.card::after{
+    position: absolute;
+    content: attr(data-value);
+    font-size: .75rem;
+     
+}
+
+.card::before {
+    top: .25rem;
+    left: .25rem;
+}
+
+
+.card::after {
+    bottom: .25rem;
+    right: .25rem;
+    transform: rotate(180deg);
+
+}
