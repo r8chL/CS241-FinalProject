@@ -4,6 +4,7 @@
 
 
 body {
+    background-color: rgb(213, 243, 254);
     margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 4rem);
@@ -16,6 +17,7 @@ body {
 
 
 .deck {
+    background-color: white;
     height: 100%;
     width: 100%;
     border: 1px solid black;  
@@ -61,6 +63,7 @@ body {
 }
 
 .card {
+    background-color: white;
     position: relative;
     height: 100%;
     width: 100%;
@@ -70,6 +73,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 4rem;
+    box-shadow: 3px 5px rgb(12, 72, 94,0.3);
 }
 
 .card.red {
