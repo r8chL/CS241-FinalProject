@@ -191,14 +191,20 @@ function flipCards () {
 
 }
 
-function updateDeckCount () {
-    //playerDeckElement.innerText = playerDeck.numberOfCards
-    computer1DeckElement.innerText = computer1Deck.numberOfCards
-   //computer2DeckElement.innerText = computer2Deck.numberOfCards
-    //computer3DeckElement.innerText = computer3Deck.numberOfCards
-    restofDeckDeckElement.innerText = restofDeck.numberOfCards
-    playerPairSlot.innerText = playerPoints
+function endGame() {
+    window.location.href = "index.html"; //have it redirect to endscreen/scoreboard instead
+}
 
+function updateDeckCount () {
+    if (restofDeck.numberOfCards == 0){
+        endGame();
+    }
+   //playerDeckElement.innerText = playerDeck.numberOfCards
+   computer1DeckElement.innerText = computer1Deck.numberOfCards
+  //computer2DeckElement.innerText = computer2Deck.numberOfCards
+   //computer3DeckElement.innerText = computer3Deck.numberOfCards
+   restofDeckDeckElement.innerText = restofDeck.numberOfCards
+   playerPairSlot.innerText = playerPoints
 }
 
 
