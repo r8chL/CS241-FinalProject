@@ -33,7 +33,7 @@ function makeMove() {
         }
         else{
             var cardNum=Math.floor(Math.random() * 14)+1;
-            while (prevMoves.include(cardNum!=False)){
+            while (prevMoves.include(cardNum)!=False){
                 var cardNum=Math.floor(Math.random() * 14)+1;
             }
             prevMoves.push(cardNUm)
